@@ -4,11 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const npc = document.getElementById('npc');
   const gptResponseText = document.getElementById('gpt-response');
 
-  // Event klik pada NPC
   npc.addEventListener('click', async () => {
-    // Tampilkan indikator proses berpikir
     gptResponseText.setAttribute('value', '🤖 AI sedang berpikir...');
-
+    
     const prompt = "Ceritakan sesuatu yang menarik tentang Metaverse dalam 1 kalimat.";
 
     try {
@@ -21,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Komponen A-Frame: NPC bergerak bolak-balik (simulasi FSM sederhana)
+// NPC animation (simulasi FSM)
 AFRAME.registerComponent('npc-behaviour', {
   schema: {},
   init: function () {
     this.el.setAttribute('animation', {
       property: 'position',
-      to: '1 0.5 -3',       // Titik akhir
-      dur: 3000,            // Durasi animasi
-      dir: 'alternate',     // Bolak-balik
+      to: '1 0.5 -3',
+      dur: 3000,
+      dir: 'alternate',
       loop: true,
       easing: 'easeInOutQuad'
     });
