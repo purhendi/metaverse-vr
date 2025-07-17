@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metaverse VR GPT</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <a-scene>
+    <!-- Sky -->
+    <a-sky color="#ECECEC"></a-sky>
+
+    <!-- Floor -->
+    <a-plane rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
+
+    <!-- Player -->
+    <a-entity camera position="0 1.6 3" look-controls wasd-controls></a-entity>
+
+    <!-- NPC/AI -->
+    <a-box id="npc" npc-behaviour color="#4CC3D9" position="0 0.5 -3" scale="0.5 1 0.5"></a-box>
+
+    <!-- Text area for GPT response -->
+    <a-text id="gpt-response" value="Halo, saya AI. Klik untuk bicara." position="0 2.5 -3" align="center" width="4"></a-text>
+  </a-scene>
+
+  <!-- SIMPAN API KEY DI SINI, BUKAN DI ai.js -->
+  <script>
+    const OPENAI_API_KEY = "ISI_API_KEY_KAMU_DI_SINI";
+  </script>
+
+  <!-- Load JavaScript -->
+  <script src="./js/ai.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
