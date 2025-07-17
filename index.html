@@ -30,11 +30,21 @@
       width="4" 
       color="black">
     </a-text>
+
+    <!-- Penjelasan: dummy mode aktif -->
+    <a-text 
+      value="*Versi GitHub Pages menggunakan Dummy GPT karena alasan keamanan.\nVersi asli hanya bisa dijalankan secara lokal dengan API Key.*" 
+      position="0 0.3 -3" 
+      width="4.5" 
+      align="center" 
+      color="red"
+      wrap-count="40">
+    </a-text>
   </a-scene>
 
-  <!-- SIMPAN API KEY DI SINI, JANGAN DI ai.js -->
+  <!-- SIMPAN API KEY DI SINI SAAT LOKAL, JANGAN UNTUK ONLINE -->
   <script>
-    const OPENAI_API_KEY = "ISI_API_KEY_KAMU_DI_SINI";
+    const OPENAI_API_KEY = ""; // kosongkan agar aman di GitHub Pages
   </script>
 
   <!-- Load JavaScript -->
