@@ -22,11 +22,17 @@
     <a-box id="npc" npc-behaviour color="#4CC3D9" position="0 0.5 -3" scale="0.5 1 0.5"></a-box>
 
     <!-- Text area for GPT response -->
-<a-text id="gpt-response" value="Halo, saya AI. Klik untuk bicara." position="0 2.5 -3" align="center" width="4"></a-text>
-
+    <a-text 
+      id="gpt-response" 
+      value="Halo, saya AI. Klik untuk bicara." 
+      position="0 2.5 -3" 
+      align="center" 
+      width="4" 
+      color="black">
+    </a-text>
   </a-scene>
 
-  <!-- SIMPAN API KEY DI SINI, BUKAN DI ai.js -->
+  <!-- SIMPAN API KEY DI SINI, JANGAN DI ai.js -->
   <script>
     const OPENAI_API_KEY = "ISI_API_KEY_KAMU_DI_SINI";
   </script>
