@@ -15,14 +15,16 @@
     <a-plane rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
 
     <!-- Camera + Cursor -->
-    <a-entity camera position="0 1.6 3" look-controls wasd-controls>
-      <a-cursor></a-cursor>
+    <a-entity position="0 1.6 3">
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
     </a-entity>
 
-    <!-- NPC -->
-    <a-box id="npc" npc-behaviour color="#4CC3D9" position="0 0.5 -3" scale="0.5 1 0.5"></a-box>
+    <!-- NPC/AI -->
+    <a-box id="npc" class="clickable" npc-behaviour color="#4CC3D9" position="0 0.5 -3" scale="0.5 1 0.5"></a-box>
 
-    <!-- GPT Response -->
+    <!-- Text AI -->
     <a-text 
       id="gpt-response" 
       value="Halo, saya AI. Klik untuk bicara." 
@@ -32,9 +34,9 @@
       color="black">
     </a-text>
 
-    <!-- Dummy GPT Notice -->
+    <!-- Info Dummy Mode -->
     <a-text 
-      value="*Versi GitHub Pages menggunakan Dummy GPT karena alasan keamanan.\nVersi asli hanya bisa dijalankan secara lokal dengan API Key.*" 
+      value="*Versi GitHub Pages menggunakan Dummy GPT karena alasan keamanan.\nVersi asli hanya bisa dijalankan lokal dengan API Key*" 
       position="0 0.3 -3" 
       width="4.5" 
       align="center" 
@@ -43,9 +45,9 @@
     </a-text>
   </a-scene>
 
-  <!-- Tambahkan API key saat dijalankan lokal -->
+  <!-- Kosongkan API Key untuk GitHub Pages -->
   <script>
-    const OPENAI_API_KEY = ""; // ← Isi hanya saat dijalankan lokal
+    const OPENAI_API_KEY = "";
   </script>
 
   <!-- Load JS -->
