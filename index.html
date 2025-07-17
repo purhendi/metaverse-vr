@@ -9,19 +9,19 @@
 </head>
 <body>
   <a-scene>
-    <!-- Sky -->
+    <!-- Latar langit -->
     <a-sky color="#ECECEC"></a-sky>
 
-    <!-- Floor -->
+    <!-- Lantai -->
     <a-plane rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
 
-    <!-- Player -->
+    <!-- Kamera (Player) -->
     <a-entity camera position="0 1.6 3" look-controls wasd-controls></a-entity>
 
-    <!-- NPC/AI -->
+    <!-- NPC (AI Box) -->
     <a-box id="npc" npc-behaviour color="#4CC3D9" position="0 0.5 -3" scale="0.5 1 0.5"></a-box>
 
-    <!-- Text area for GPT response -->
+    <!-- Area Teks Respons AI -->
     <a-text 
       id="gpt-response" 
       value="Halo, saya AI. Klik untuk bicara." 
@@ -31,7 +31,7 @@
       color="black">
     </a-text>
 
-    <!-- Penjelasan: dummy mode aktif -->
+    <!-- Penjelasan mode dummy -->
     <a-text 
       value="*Versi GitHub Pages menggunakan Dummy GPT karena alasan keamanan.\nVersi asli hanya bisa dijalankan secara lokal dengan API Key.*" 
       position="0 0.3 -3" 
@@ -42,12 +42,12 @@
     </a-text>
   </a-scene>
 
-  <!-- SIMPAN API KEY DI SINI SAAT LOKAL, JANGAN UNTUK ONLINE -->
+  <!-- API Key (kosong di GitHub Pages agar aman) -->
   <script>
-    const OPENAI_API_KEY = ""; // kosongkan agar aman di GitHub Pages
+    const OPENAI_API_KEY = ""; // ← isi saat lokal, biarkan kosong untuk GitHub
   </script>
 
-  <!-- Load JavaScript -->
+  <!-- Load Script -->
   <script src="./js/ai.js"></script>
   <script src="./js/app.js"></script>
 </body>
